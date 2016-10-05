@@ -16,7 +16,16 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
+        $root = $treeBuilder
+            ->root('padam87_addressbundle', 'array')
+            ->children()
+            ->booleanNode('enable_short_alias')->defaultTrue()->end()
+        ;
 
+//        $this->addHandlersSection($root);
+//        $this->addSerializersSection($root);
+//        $this->addMetadataSection($root);
+//        $this->addVisitorsSection($root);
         return $treeBuilder;
     }
 }
