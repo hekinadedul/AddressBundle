@@ -2,6 +2,8 @@
 
 namespace Padam87\AddressBundle\Entity\Traits;
 
+use Doctrine\ORM\Mapping as ORM;
+
 trait GeocodedAddressTrait
 {
     /**
